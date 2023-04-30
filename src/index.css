@@ -70,6 +70,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-left: 20px;
 }
 
 .menu a {
@@ -137,13 +138,7 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-/* media screen below tablet size flex direction should be column */
-@media screen and (max-width: 768px) {
-  .content-body {
-    flex-direction: column;
-  }
+  gap: 8px;
 }
 
 .content-body > * {
@@ -224,4 +219,18 @@ h1 {
 
 .todos {
   margin-top: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .hero {
+    font-size: 40px;
+  }
+  .navbar, .footer {
+    padding: 10px 32px;
+    font-size: 16px;
+  }
+  .content-body {
+    flex-direction: column;
+  }
 }
