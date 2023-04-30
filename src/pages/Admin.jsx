@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 
 const Admin = () => {
   const [todos, setTodos] = useState([])
-  console.log('🚀 ~ file: Admin.jsx:5 ~ Admin ~ todos:', todos)
 
   useEffect(() => {
     const storedTodos =
