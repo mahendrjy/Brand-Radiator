@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   font-family: sans-serif;
-  width: 1400px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -109,7 +109,7 @@ h1 {
 }
 
 .content {
-  height: calc(100vh - 92px);
+  min-height: calc(100vh - 92px);
   margin-top: 96px;
   padding: 0 20px;
   position:relative;
@@ -139,11 +139,19 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
+/* media screen below tablet size flex direction should be column */
+@media screen and (max-width: 768px) {
+  .content-body {
+    flex-direction: column;
+  }
+}
+
 .content-body > * {
   width: 400px;
   height: 600px;
   background: -webkit-linear-gradient(violet, blueviolet);
-  cursor: pointer
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .content-body > *:hover {
